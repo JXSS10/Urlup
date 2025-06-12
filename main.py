@@ -286,13 +286,8 @@ async def main():
     me_bot = await app.get_me()
     logger.info(f"Bot started as @{me_bot.username}")
     
-    if not await app.is_user_authorized():
-        logger.critical("User is NOT authorized! Please run the script manually in a terminal to log in.")
-        await app.stop(); return
     
-    me_user = await app.get_users("me")
-    logger.info(f"User account logged in as: {me_user.first_name}. Ready to process files up to 2GB.")
-    await asyncio.Event().wait()
+    
 
 if __name__ == "__main__":
     try:
