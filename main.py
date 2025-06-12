@@ -291,6 +291,6 @@ async def main():
 
 if __name__ == "__main__":
     try:
-        app.run(main())
+        app.run()
     except (KeyboardInterrupt, SystemExit):
         logger.info("Bot stopped.")
