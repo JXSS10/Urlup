@@ -103,7 +103,7 @@ async def photo_handler(_, message: Message):
          InlineKeyboardButton("❌ لا، تجاهل", callback_data="cancel_thumb")]
     ]))
 
-@app.on_message(filters.text & ~filters.command())
+@app.on_message(filters.text & ~filters.command(["start", "help", "cancel"]))
 async def text_handler(client: Client, message: Message):
     chat_id = message.chat.id; text = message.text
     if get_user_state(chat_id, 'current_task'):
