@@ -16,3 +16,5 @@ requests-toolbelt
 Pillow
 telebot
 psutil
+aiohttp
+yt_dlp
